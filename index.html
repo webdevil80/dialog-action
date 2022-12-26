@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      body {
+        background-image: url(gfg_complete_logo_2x-min.png);
+        background-position: center center;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: auto;
+      }
+    </style>
+  </head>
+
+  <body>
+    <p>All buttons will delay for 5 seconds</p>
+    <div style="margin-left: 500px; margin-top: 300px">
+      <button style="font-size: 20px" class="btn" onclick="fun()">Alert</button>
+      <button style="font-size: 20px" class="btn" onclick="conf()">
+        Confirm
+      </button>
+      <button style="font-size: 20px" class="btn" onclick="prom()">
+        Prompt
+      </button>
+
+      <p id="para"></p>
+    </div>
+
+    <script>
+      function fun() {
+        setTimeout(function () {
+          alert("hi");
+        }, 5000);
+      }
+
+      function conf() {
+        setTimeout(function () {
+          confirm("do you want to confirm?");
+        }, 5000);
+      }
+
+      function prom() {
+        setTimeout(function () {
+          var a = prompt("enter your name");
+          if (a != null) {
+            document.getElementById("para").innerHTML = "Hiii " + a;
+          }
+        }, 5000);
+      }
+    </script>
+  </body>
+</html>
